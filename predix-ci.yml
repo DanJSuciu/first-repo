@@ -10,3 +10,12 @@ steps:
     script: "echo Second"
   third-step:
     script: "echo Third"
+
+notify:
+- channel: email
+  trigger-on: done
+  branch:
+    - master/*
+  message: "Congratulations, testing of %repo%'s %branch% branch finished"
+  recipients: saracassella@gmail.com
+  
