@@ -9,15 +9,25 @@ steps:
     script: "exit 0"
   e:
     script: "exit 0"
+  f:
+    script: "exit 0"
+  g:
+    script: "exit 0"
 pipeline:
-  a:
-   - b: e
-   - c
-   - d
+  - a
+  - b
+  - c
+  - d
+  - e
+  - f
+  - g
 edges:
-  - c: e
-  - d: e
-
+  - a: e
+  - b: e
+  - c: f
+  - d: f
+  - e: g
+  - f: g
 notify:
 - channel: email
   trigger-on: done
