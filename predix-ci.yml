@@ -1,15 +1,27 @@
-pipeline:
-  first-step: 
-    second-step:
-      third-step
-      
 steps:
-  first-step:
-    script: "echo First"
-  second-step:
-    script: "echo Second"
-  third-step:
-    script: "echo Third"
+  a:
+    tests:
+      - "exit 0"
+  b:
+    tests:
+      - "exit 0"
+  c:
+    tests:
+      - "exit 0"
+  d:
+    tests:
+      - "exit 0"
+  e:
+    tests:
+      - "exit 0"
+pipeline:
+  a:
+   - b: e
+   - c
+   - d
+edges:
+  - c: e
+  - d: e
 
 notify:
 - channel: email
