@@ -15,5 +15,5 @@ notify:
   trigger-on: done
   branch:
     - master
-  message: "Congratulations sara, testing of %repo%'s %branch% branch finished"
+  message: "Congratulations Sara, testing of %repo%'s %branch% branch finished"
   recipients: saracassella@gmail.com
