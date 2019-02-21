@@ -7,6 +7,6 @@ steps:
   first-step:
     script: "echo First"
   second-step:
-    script: echo Second"
+    script: "echo Second"
   third-step:
     script: "echo Third"
