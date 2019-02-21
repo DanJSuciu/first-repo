@@ -1,37 +1,12 @@
-steps:
-  a:
-    script: "exit 0"
-  b:
-    script: "exit 0"
-  c:
-    script: "exit 0"
-  d:
-    script: "exit 0"
-  e:
-    script: "exit 0"
-  f:
-    script: "exit 0"
-  g:
-    script: "exit 0"
 pipeline:
-  - a
-  - b
-  - c
-  - d
-  - e
-  - f
-  - g
-edges:
-  - a: e
-  - b: e
-  - c: f
-  - d: f
-  - e: g
-  - f: g
-notify:
-- channel: email
-  trigger-on: done
-  branch:
-    - master
-  message: "Congratulations, testing of %repo%'s %branch% branch finished"
-  recipients: saracassella@gmail.com
+  first-step: 
+    second-step:
+      third-step
+      
+steps:
+  first-step:
+    script: "echo First"
+  second-step:
+    script: "echo Second"
+  third-step:
+    script: "echo Third"
